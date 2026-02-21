@@ -179,6 +179,12 @@ footer {
 .einsatz-table td a:hover {
     background-color: #a00000;
 }
+@media (max-width: 768px) {
+    .einsatz-table th, .einsatz-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+}    
 }
 
 .menu-toggle {
