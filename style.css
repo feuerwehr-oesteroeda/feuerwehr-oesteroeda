@@ -149,4 +149,18 @@ footer {
 .einsatz-table tr:hover {
     background: #1c1c1c;
 }
+.light-mode {
+    background: #f5f5f5;
+    color: black;
+}
+
+.light-mode .card {
+    background: white;
+}
+
+.mode-btn {
+    margin-top:10px;
+    padding:5px 10px;
+    cursor:pointer;
+}    
 }
