@@ -101,7 +101,7 @@ footer {
     border-radius: 10px;
     margin-bottom: 20px;
     }
-    /* Bild */
+/* Bild klickbar */
 .zoom-img {
     width: 100%;
     border-radius: 10px;
@@ -113,11 +113,10 @@ footer {
     opacity: 0.8;
 }
 
-/* Lightbox */
+/* Lightbox Hintergrund */
 #lightbox {
     display: none;
     position: fixed;
-    z-index: 1000;
     top:0;
     left:0;
     width:100%;
@@ -125,42 +124,11 @@ footer {
     background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
 }
-    .einsatz-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.einsatz-table th, .einsatz-table td {
-    padding: 10px;
-    border-bottom: 1px solid #444;
-    text-align: center;
-}
-
-.einsatz-table th {
-    background: #cc0000;
-}
-
-.einsatz-table tr:hover {
-    background: #1c1c1c;
-}
-.light-mode {
-    background: #f5f5f5;
-    color: black;
-}
-
-.light-mode .card {
-    background: white;
-}
-
-.mode-btn {
-    margin-top:10px;
-    padding:5px 10px;
-    cursor:pointer;
-}    
 }
