@@ -148,5 +148,28 @@ footer {
 
 .einsatz-table tr:hover {
     background: #1c1c1c;
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: right;
+        padding: 10px 20px;
+    }
 }    
 }
