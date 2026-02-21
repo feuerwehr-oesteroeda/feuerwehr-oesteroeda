@@ -29,5 +29,8 @@ document.addEventListener("click", function(e) {
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
-} 
+}
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+}    
   });
