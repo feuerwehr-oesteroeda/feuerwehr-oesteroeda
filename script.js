@@ -27,6 +27,13 @@ document.addEventListener("click", function(e) {
     }
 });
 
+document.addEventListener("click", function(e) {
+    if(e.target.classList.contains("zoom-img")) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = e.target.src;
+    }
+});
+
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
