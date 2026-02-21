@@ -131,4 +131,22 @@ footer {
     max-width: 90%;
     max-height: 90%;
 }
+    .einsatz-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.einsatz-table th, .einsatz-table td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.einsatz-table th {
+    background: #cc0000;
+}
+
+.einsatz-table tr:hover {
+    background: #1c1c1c;
+}
 }
