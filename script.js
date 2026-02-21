@@ -31,8 +31,9 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 function toggleMenu() {
-    document.getElementById("nav").classList.toggle("active");
-} 
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
+}
 function toggleDarkMode() {
     document.body.classList.toggle("light-mode");
 }    
