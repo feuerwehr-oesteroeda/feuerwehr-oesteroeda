@@ -130,34 +130,55 @@ footer {
     max-width: 90%;
     max-height: 90%;
 }
-/* Tabelle */
+/* Tabelle Desktop */
 .einsatz-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto; /* wichtig für flexible Spalten */
+    table-layout: auto; /* flexible Spalten */
+    font-size: 1rem; /* größere Schrift für Desktop */
 }
 
 .einsatz-table th, .einsatz-table td {
-    padding: 15px 10px; /* mehr Abstand */
+    padding: 15px 20px; /* mehr Abstand */
     border-bottom: 1px solid #444;
     text-align: center;
-    font-size: 1rem; /* größerer Text */
 }
 
+/* Kopfzeile farbig hinterlegt */
 .einsatz-table th {
-    background: #cc0000;
+    background-color: #cc0000; /* dunkelrot */
+    color: white;
+    font-weight: bold;
 }
 
+/* Datenzeilen abwechselnd farbig */
+.einsatz-table tbody tr:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+.einsatz-table tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+/* Hover Effekt */
 .einsatz-table tr:hover {
-    background: #1c1c1c;
+    background-color: #3a0d0d;
 }
 
-/* Tabelle responsive */
-@media (max-width: 768px) {
-    .einsatz-table th, .einsatz-table td {
-        padding: 10px 5px;
-        font-size: 0.9rem;
-    }
+/* Info-Button farbig */
+.einsatz-table td a {
+    color: white;
+    background-color: #cc0000;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.einsatz-table td a:hover {
+    background-color: #a00000;
+}
 }
 
 .menu-toggle {
