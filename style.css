@@ -134,24 +134,25 @@ footer {
 .einsatz-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto; /* flexible Spalten */
+    table-layout: auto;
     font-size: 1rem; /* größere Schrift für Desktop */
 }
 
+/* Zellen */
 .einsatz-table th, .einsatz-table td {
-    padding: 15px 20px; /* mehr Abstand */
+    padding: 15px 20px;
     border-bottom: 1px solid #444;
     text-align: center;
 }
 
-/* Kopfzeile farbig hinterlegt */
+/* Kopfzeile farbig */
 .einsatz-table th {
     background-color: #cc0000; /* dunkelrot */
     color: white;
     font-weight: bold;
 }
 
-/* Datenzeilen abwechselnd farbig */
+/* Abwechselnde Zeilenfarben */
 .einsatz-table tbody tr:nth-child(odd) {
     background-color: #1e1e1e;
 }
@@ -165,7 +166,7 @@ footer {
     background-color: #3a0d0d;
 }
 
-/* Info-Button farbig */
+/* Info-Button */
 .einsatz-table td a {
     color: white;
     background-color: #cc0000;
@@ -179,12 +180,20 @@ footer {
 .einsatz-table td a:hover {
     background-color: #a00000;
 }
+
+/* Spaltenbreiten optional */
+.einsatz-table th:nth-child(1),
+.einsatz-table td:nth-child(1) { width: 80px; }
+.einsatz-table th:nth-child(6),
+.einsatz-table td:nth-child(6) { width: 200px; }
+
+/* Responsive für Handy */
 @media (max-width: 768px) {
     .einsatz-table th, .einsatz-table td {
         padding: 10px 5px;
         font-size: 0.9rem;
     }
-}    
+}
 }
 
 .menu-toggle {
