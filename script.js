@@ -19,7 +19,7 @@ fetch("einsatz/einsaetze.json")
         </div>
       `;
     });
-    // Lightbox
+// Lightbox Funktion
 document.addEventListener("click", function(e) {
     if(e.target.classList.contains("zoom-img")) {
         document.getElementById("lightbox").style.display = "flex";
@@ -29,8 +29,5 @@ document.addEventListener("click", function(e) {
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
-}
-function toggleDarkMode() {
-    document.body.classList.toggle("light-mode");
-}    
+} 
   });
