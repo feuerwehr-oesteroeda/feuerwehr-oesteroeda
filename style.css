@@ -131,15 +131,18 @@ footer {
     max-width: 90%;
     max-height: 90%;
 }
+/* Tabelle */
 .einsatz-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto; /* wichtig für flexible Spalten */
 }
 
 .einsatz-table th, .einsatz-table td {
-    padding: 10px;
+    padding: 15px 10px; /* mehr Abstand */
     border-bottom: 1px solid #444;
     text-align: center;
+    font-size: 1rem; /* größerer Text */
 }
 
 .einsatz-table th {
@@ -149,18 +152,14 @@ footer {
 .einsatz-table tr:hover {
     background: #1c1c1c;
 }
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
 
+/* Tabelle responsive */
 @media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        text-align: center;
+    .einsatz-table th, .einsatz-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
     }
+}
 
     nav.active {
         display: flex;
