@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+</head>
+<body>
+
+<h2>Admin Login</h2>
+
+<input type="email" id="email" placeholder="E-Mail">
+<input type="password" id="password" placeholder="Passwort">
+<button onclick="login()">Login</button>
+
+<script type="module">
+import { auth } from "./firebase.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+window.login = function() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      window.location.href = "admin.html";
+    })
+    .catch(() => {
+      alert("Login fehlgeschlagen!");
+    });
+}
+</script>
+
+</body>
+</html>
