@@ -233,17 +233,8 @@ footer {
     animation: slideshow 15s infinite;
     }
 
-    .hero-overlay {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 10px;
-    }
-
-    @keyframes slideshow {
+    /* Slideshow */
+@keyframes slideshow {
     0%   { background-image: url('images/Dienstedt.png'); }
     33%  { background-image: url('images/Kilian_der_Einsatzleiter.png'); }
     66%  { background-image: url('images/NRW.png'); }
