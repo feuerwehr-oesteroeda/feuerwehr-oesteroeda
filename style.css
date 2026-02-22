@@ -130,28 +130,6 @@ footer {
     max-width: 90%;
     max-height: 90%;
 }
-.einsatz-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.einsatz-table th {
-    background: #cc0000;
-    color: white;
-    padding: 15px;
-}
-
-.einsatz-table td {
-    padding: 15px;
-}
-
-.einsatz-table tbody tr:nth-child(even) {
-    background: #1e1e1e;
-}
-
-.einsatz-table tbody tr:nth-child(odd) {
-    background: #2a2a2a;
-}
 
 .menu-toggle {
     display: none;
@@ -192,5 +170,68 @@ footer {
     margin-top:10px;
     padding:5px 10px;
     cursor:pointer;
-}    
+}  
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Tabelle */
+.einsatz-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Kopfzeile */
+.einsatz-table thead {
+    background: linear-gradient(to right, #cc0000, #990000);
+}
+
+.einsatz-table th {
+    padding: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Zellen */
+.einsatz-table td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+/* Zeilenfarben */
+.einsatz-table tbody tr:nth-child(odd) {
+    background-color: #1c1c1c;
+}
+
+.einsatz-table tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+/* Hover Effekt */
+.einsatz-table tbody tr:hover {
+    background-color: #3a0000;
+    transition: 0.3s;
+}
+
+/* Info Button */
+.einsatz-table td a {
+    background: #cc0000;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.einsatz-table td a:hover {
+    background: #990000;
+}
 }
