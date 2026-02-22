@@ -10,15 +10,26 @@ body {
 }
 
 /* ========================= */
-/* HERO SLIDESHOW */
+/* HERO JS SLIDESHOW */
 /* ========================= */
 
 .hero {
     position: relative;
     height: 400px;
-    background-size: cover;
-    background-position: center;
-    animation: slideshow 18s infinite;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-img.active {
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -28,14 +39,7 @@ body {
     background: rgba(0,0,0,0.6);
     padding: 20px;
     border-radius: 10px;
-}
-
-@keyframes slideshow {
-    0%   { background-image: url('images/Dienstedt.png'); }
-    25%  { background-image: url('images/Kilian_der_Einsatzleiter.png'); }
-    50%  { background-image: url('images/NRW.png'); }
-    75%  { background-image: url('images/store_mercedes_sprinter_2019_elw.png'); }
-    100% { background-image: url('images/Dienstedt.png'); }
+    z-index: 2;
 }
 
 /* ========================= */
