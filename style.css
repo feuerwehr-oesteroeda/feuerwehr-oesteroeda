@@ -1,4 +1,7 @@
-/* Grundlayout */
+/* ========================= */
+/* GRUNDLAYOUT */
+/* ========================= */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -6,19 +9,49 @@ body {
     color: #fff;
 }
 
-/* Header */
-header {
+/* ========================= */
+/* HERO SLIDESHOW */
+/* ========================= */
+
+.hero {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 18s infinite;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@keyframes slideshow {
+    0%   { background-image: url('images/Dienstedt.png'); }
+    25%  { background-image: url('images/Kilian_der_Einsatzleiter.png'); }
+    50%  { background-image: url('images/NRW.png'); }
+    75%  { background-image: url('images/store_mercedes_sprinter_2019_elw.png'); }
+    100% { background-image: url('images/Dienstedt.png'); }
+}
+
+/* ========================= */
+/* HEADER (für Unterseiten) */
+/* ========================= */
+
+header.standard-header {
     background: linear-gradient(90deg, #8b0000, #cc0000);
     padding: 30px 20px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
+/* ========================= */
+/* NAVIGATION */
+/* ========================= */
 
-/* Navigation */
 nav {
     background: #1a1a1a;
     display: flex;
@@ -37,28 +70,37 @@ nav a:hover {
     background: #cc0000;
 }
 
-/* Container */
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* Karten */
+/* ========================= */
+/* KARTEN */
+/* ========================= */
+
 .card {
     background: #1c1c1c;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    box-shadow: 0 0 20px rgba(255,0,0,0.4);
 }
 
-/* Buttons */
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -73,13 +115,6 @@ nav a:hover {
     background: #a00000;
 }
 
-/* Footer */
-footer {
-    background: black;
-    text-align: center;
-    padding: 20px;
-}
-
 /* ========================= */
 /* TABELLE EINSÄTZE */
 /* ========================= */
@@ -87,7 +122,7 @@ footer {
 .einsatz-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-top: 20px;
 }
 
@@ -118,7 +153,6 @@ footer {
 
 .einsatz-table tbody tr:hover {
     background-color: #3a0000;
-    transition: 0.3s;
 }
 
 .einsatz-table td a {
@@ -168,6 +202,16 @@ footer {
 }
 
 /* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================= */
 /* LIGHT MODE */
 /* ========================= */
 
@@ -180,13 +224,20 @@ footer {
     background: white;
 }
 
+.light-mode nav {
+    background: #ddd;
+}
+
+.light-mode nav a {
+    color: black;
+}
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 
 @media (max-width: 768px) {
 
-    /* Header kleiner */
     .hero {
         height: 250px;
     }
@@ -198,19 +249,10 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* Navigation untereinander */
     nav {
         flex-direction: column;
     }
 
-    /* Tabelle kompakter */
-    .einsatz-table th,
-    .einsatz-table td {
-        padding: 10px 5px;
-        font-size: 0.9rem;
-    }
-
-    /* Container enger */
     .container {
         padding: 15px;
     }
@@ -219,25 +261,5 @@ footer {
     .einsatz-table td {
         padding: 10px 5px;
         font-size: 0.9rem;
-    }
-
-    /* ========================= */
-    /* HERO SLIDESHOW */
-    /* ========================= */
-
-    .hero {
-    position: relative;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    animation: slideshow 15s infinite;
-    }
-
-    /* Slideshow */
-@keyframes slideshow {
-    0%   { background-image: url('images/Dienstedt.png'); }
-    33%  { background-image: url('images/Kilian_der_Einsatzleiter.png'); }
-    66%  { background-image: url('images/NRW.png'); }
-    100% { background-image: url('images/store_mercedes_sprinter_2019_elw.png'); }
     }
 }
