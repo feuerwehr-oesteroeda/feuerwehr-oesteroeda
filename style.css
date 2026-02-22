@@ -186,32 +186,33 @@ footer {
 
 @media (max-width: 768px) {
 
-    header h1 {
-        font-size: 1.5rem;
+    /* Header kleiner */
+    .hero {
+        height: 250px;
     }
 
+    .hero-overlay {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Navigation untereinander */
     nav {
         flex-direction: column;
-        display: none;
-        text-align: center;
-        width: 100%;
-        background: #1a1a1a;
     }
 
-    nav.active {
-        display: flex;
+    /* Tabelle kompakter */
+    .einsatz-table th,
+    .einsatz-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
     }
 
-    .menu-toggle {
-        display: block;
-        text-align: right;
-        padding: 10px 20px;
-        font-size: 28px;
-        cursor: pointer;
-    }
-
+    /* Container enger */
     .container {
-        padding: 20px;
+        padding: 15px;
     }
 
     .einsatz-table th,
@@ -224,15 +225,15 @@ footer {
     /* HERO SLIDESHOW */
     /* ========================= */
 
-.hero {
+    .hero {
     position: relative;
     height: 400px;
     background-size: cover;
     background-position: center;
     animation: slideshow 15s infinite;
-}
+    }
 
-.hero-overlay {
+    .hero-overlay {
     position: absolute;
     bottom: 40px;
     left: 40px;
@@ -240,12 +241,12 @@ footer {
     background: rgba(0,0,0,0.5);
     padding: 20px;
     border-radius: 10px;
-}
+    }
 
-@keyframes slideshow {
+    @keyframes slideshow {
     0%   { background-image: url('images/header1.jpg'); }
     33%  { background-image: url('images/header2.jpg'); }
     66%  { background-image: url('images/header3.jpg'); }
     100% { background-image: url('images/header1.jpg'); }
-}
+    }
 }
