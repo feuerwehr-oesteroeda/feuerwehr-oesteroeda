@@ -130,70 +130,27 @@ footer {
     max-width: 90%;
     max-height: 90%;
 }
-/* Tabelle Desktop */
 .einsatz-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
-    font-size: 1rem; /* größere Schrift für Desktop */
 }
 
-/* Zellen */
-.einsatz-table th, .einsatz-table td {
-    padding: 15px 20px;
-    border-bottom: 1px solid #444;
-    text-align: center;
-}
-
-/* Kopfzeile farbig */
 .einsatz-table th {
-    background-color: #cc0000; /* dunkelrot */
+    background: #cc0000;
     color: white;
-    font-weight: bold;
+    padding: 15px;
 }
 
-/* Abwechselnde Zeilenfarben */
-.einsatz-table tbody tr:nth-child(odd) {
-    background-color: #1e1e1e;
+.einsatz-table td {
+    padding: 15px;
 }
 
 .einsatz-table tbody tr:nth-child(even) {
-    background-color: #2a2a2a;
+    background: #1e1e1e;
 }
 
-/* Hover Effekt */
-.einsatz-table tr:hover {
-    background-color: #3a0d0d;
-}
-
-/* Info-Button */
-.einsatz-table td a {
-    color: white;
-    background-color: #cc0000;
-    padding: 5px 8px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.einsatz-table td a:hover {
-    background-color: #a00000;
-}
-
-/* Spaltenbreiten optional */
-.einsatz-table th:nth-child(1),
-.einsatz-table td:nth-child(1) { width: 80px; }
-.einsatz-table th:nth-child(6),
-.einsatz-table td:nth-child(6) { width: 200px; }
-
-/* Responsive für Handy */
-@media (max-width: 768px) {
-    .einsatz-table th, .einsatz-table td {
-        padding: 10px 5px;
-        font-size: 0.9rem;
-    }
-}
+.einsatz-table tbody tr:nth-child(odd) {
+    background: #2a2a2a;
 }
 
 .menu-toggle {
