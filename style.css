@@ -39,9 +39,9 @@ nav a:hover {
 
 /* Container */
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 /* Karten */
@@ -80,28 +80,64 @@ footer {
     padding: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
+/* ========================= */
+/* TABELLE EINSÄTZE */
+/* ========================= */
 
-    nav {
-        flex-direction: column;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .einsatzbild {
+.einsatz-table {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    }
-/* Bild klickbar */
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.einsatz-table thead {
+    background: linear-gradient(to right, #cc0000, #990000);
+}
+
+.einsatz-table th {
+    padding: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.einsatz-table td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.einsatz-table tbody tr:nth-child(odd) {
+    background-color: #1c1c1c;
+}
+
+.einsatz-table tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+.einsatz-table tbody tr:hover {
+    background-color: #3a0000;
+    transition: 0.3s;
+}
+
+.einsatz-table td a {
+    background: #cc0000;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.einsatz-table td a:hover {
+    background: #990000;
+}
+
+/* ========================= */
+/* BILDER ZOOM */
+/* ========================= */
+
 .zoom-img {
     width: 100%;
     border-radius: 10px;
@@ -131,16 +167,32 @@ footer {
     max-height: 90%;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+/* ========================= */
+/* LIGHT MODE */
+/* ========================= */
+
+.light-mode {
+    background: #f5f5f5;
+    color: black;
 }
 
+.light-mode .card {
+    background: white;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
 @media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
     nav {
-        display: none;
         flex-direction: column;
+        display: none;
         text-align: center;
         width: 100%;
         background: #1a1a1a;
@@ -154,84 +206,17 @@ footer {
         display: block;
         text-align: right;
         padding: 10px 20px;
+        font-size: 28px;
+        cursor: pointer;
     }
-}
-}
-.light-mode {
-    background: #f5f5f5;
-    color: black;
-}
 
-.light-mode .card {
-    background: white;
-}
+    .container {
+        padding: 20px;
+    }
 
-.mode-btn {
-    margin-top:10px;
-    padding:5px 10px;
-    cursor:pointer;
-}  
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-/* Tabelle */
-.einsatz-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.1rem;
-    margin-top: 20px;
-}
-
-/* Kopfzeile */
-.einsatz-table thead {
-    background: linear-gradient(to right, #cc0000, #990000);
-}
-
-.einsatz-table th {
-    padding: 18px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Zellen */
-.einsatz-table td {
-    padding: 18px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-}
-
-/* Zeilenfarben */
-.einsatz-table tbody tr:nth-child(odd) {
-    background-color: #1c1c1c;
-}
-
-.einsatz-table tbody tr:nth-child(even) {
-    background-color: #252525;
-}
-
-/* Hover Effekt */
-.einsatz-table tbody tr:hover {
-    background-color: #3a0000;
-    transition: 0.3s;
-}
-
-/* Info Button */
-.einsatz-table td a {
-    background: #cc0000;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.einsatz-table td a:hover {
-    background: #990000;
-}
+    .einsatz-table th,
+    .einsatz-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
 }
