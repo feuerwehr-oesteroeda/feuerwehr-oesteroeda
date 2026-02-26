@@ -236,11 +236,17 @@ footer {
 }
 
 /* ========================= */
-/* Fahrzeugbild */
+/* Bilder */
 /* ========================= */
 
-.fahrzeugbild {
+.bild {
     width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fahrzeugbild {
+    width: 70%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
