@@ -14,21 +14,23 @@
 </header>
 
 <nav>
-  <ul class="menu">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul id="menu">
     <li><a href="index.html">Start</a></li>
     <li><a href="einsaetze.html">Einsätze</a></li>
-      
+
     <li class="dropdown">
-      <a href="#">Technik ▾</a>
+      <a href="#" onclick="toggleDropdown(event)">Technik ▾</a>
       <ul class="dropdown-content">
         <li><a href="alarmierung.html">Alarmierung</a></li>
         <li><a href="fahrzeuge.html">Fahrzeuge</a></li>
       </ul>
     </li>
-   <li><a href="ueber-uns.html">Über uns</a></li>   
 
+    <li><a href="ueber-uns.html">Über uns</a></li> 
   </ul>
-</nav>
+</nav> 
 
 <div class="container">
   <h1>🔥 Einsätze Feuerwehr Oesteröda</h1>
