@@ -1,14 +1,22 @@
+<script>
+// =============================
+// EINSÄTZE LADEN
+// =============================
+
 fetch("einsatz/einsaetze.json")
   .then(response => response.json())
   .then(data => {
+
     const container = document.getElementById("einsatzListe");
 
+    // Nach Datum sortieren (neueste zuerst)
     data.sort((a, b) => {
         const dateA = new Date(a.datum.split(".").reverse().join("-"));
         const dateB = new Date(b.datum.split(".").reverse().join("-"));
         return dateB - dateA;
     });
 
+    // Karten erzeugen
     data.forEach(einsatz => {
       container.innerHTML += `
         <div class="card">
@@ -19,13 +27,16 @@ fetch("einsatz/einsaetze.json")
         </div>
       `;
     });
-// Lightbox Funktion
-document.addEventListener("click", function(e) {
-    if(e.target.classList.contains("zoom-img")) {
-        document.getElementById("lightbox").style.display = "flex";
-        document.getElementById("lightbox-img").src = e.target.src;
-    }
-});
+
+  })
+  .catch(error => {
+      console.error("Fehler beim Laden der Einsätze:", error);
+  });
+
+
+// =============================
+// LIGHTBOX
+// =============================
 
 document.addEventListener("click", function(e) {
     if(e.target.classList.contains("zoom-img")) {
@@ -37,11 +48,22 @@ document.addEventListener("click", function(e) {
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+
+// =============================
+// MOBILE MENÜ
+// =============================
+
 function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("active");
+    document.getElementById("menu").classList.toggle("active");
 }
+
+
+// =============================
+// DARK / LIGHT MODE
+// =============================
+
 function toggleDarkMode() {
     document.body.classList.toggle("light-mode");
-}    
-  });
+}
+</script>
