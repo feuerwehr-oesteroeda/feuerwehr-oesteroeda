@@ -266,4 +266,45 @@ footer {
         padding: 10px 5px;
         font-size: 0.9rem;
     }
+
+ /* ========================= */
+/* Drop-Down */
+/* ========================= */
+    
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 }
