@@ -10,7 +10,7 @@ body {
 }
 
 /* ========================= */
-/* HERO JS SLIDESHOW */
+/* HERO */
 /* ========================= */
 
 .hero {
@@ -39,11 +39,10 @@ body {
     background: rgba(0,0,0,0.6);
     padding: 20px;
     border-radius: 10px;
-    z-index: 2;
 }
 
 /* ========================= */
-/* HEADER (für Unterseiten) */
+/* HEADER */
 /* ========================= */
 
 header.standard-header {
@@ -58,20 +57,71 @@ header.standard-header {
 
 nav {
     background: #1a1a1a;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+nav li {
+    position: relative;
 }
 
 nav a {
-    color: white;
+    display: block;
     padding: 15px 20px;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
 }
 
 nav a:hover {
     background: #cc0000;
+}
+
+/* ========================= */
+/* DROPDOWN */
+/* ========================= */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1c1c1c;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.dropdown-content li a {
+    padding: 12px 15px;
+}
+
+.dropdown-content li a:hover {
+    background: #990000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ========================= */
+/* HAMBURGER BUTTON */
+/* ========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
 }
 
 /* ========================= */
@@ -102,7 +152,7 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BUTTONS */
+/* BUTTON */
 /* ========================= */
 
 .button {
@@ -112,97 +162,10 @@ nav a:hover {
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    margin-top: 10px;
 }
 
 .button:hover {
     background: #a00000;
-}
-
-/* ========================= */
-/* TABELLE EINSÄTZE */
-/* ========================= */
-
-.einsatz-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.05rem;
-    margin-top: 20px;
-}
-
-.einsatz-table thead {
-    background: linear-gradient(to right, #cc0000, #990000);
-}
-
-.einsatz-table th {
-    padding: 18px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-}
-
-.einsatz-table td {
-    padding: 18px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-}
-
-.einsatz-table tbody tr:nth-child(odd) {
-    background-color: #1c1c1c;
-}
-
-.einsatz-table tbody tr:nth-child(even) {
-    background-color: #252525;
-}
-
-.einsatz-table tbody tr:hover {
-    background-color: #3a0000;
-}
-
-.einsatz-table td a {
-    background: #cc0000;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.einsatz-table td a:hover {
-    background: #990000;
-}
-
-/* ========================= */
-/* BILDER ZOOM */
-/* ========================= */
-
-.zoom-img {
-    width: 70%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.zoom-img:hover {
-    opacity: 0.8;
-}
-
-#lightbox {
-    display: none;
-    position: fixed;
-    top:0;
-    left:0;
-    width:70%;
-    height:70%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-#lightbox img {
-    max-width: 70%;
-    max-height: 70%;
 }
 
 /* ========================= */
@@ -216,31 +179,45 @@ footer {
 }
 
 /* ========================= */
-/* LIGHT MODE */
-/* ========================= */
-
-.light-mode {
-    background: #f5f5f5;
-    color: black;
-}
-
-.light-mode .card {
-    background: white;
-}
-
-.light-mode nav {
-    background: #ddd;
-}
-
-.light-mode nav a {
-    color: black;
-}
-
-/* ========================= */
-/* RESPONSIVE */
+/* MOBILE VERSION */
 /* ========================= */
 
 @media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: #1a1a1a;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: right;
+    }
+
+    /* Dropdown im Mobile */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
 
     .hero {
         height: 250px;
@@ -252,59 +229,4 @@ footer {
         bottom: 20px;
         font-size: 0.9rem;
     }
-
-    nav {
-        flex-direction: column;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .einsatz-table th,
-    .einsatz-table td {
-        padding: 10px 5px;
-        font-size: 0.9rem;
-    }
-
- /* ========================= */
-/* Drop-Down */
-/* ========================= */
-    
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu li {
-  position: relative;
-}
-
-.menu a {
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-  color: black;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  list-style: none;
-  padding: 0;
-}
-
-.dropdown-content li a {
-  padding: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 }
