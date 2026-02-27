@@ -272,11 +272,6 @@ footer {
         text-align: center;
     }
 
-    .menu-toggle {
-        display: block;
-        text-align: right;
-    }
-
     .dropdown-content {
         position: static;
         border-radius: 0;
