@@ -8,8 +8,14 @@
 </head>
 <body>
 
-<header>
-  <h1>📟 Alarmierung</h1>
+<header class="hero">
+    <img src="images/MZF.png" class="hero-img active">
+    <img src="images/Straße.png" class="hero-img">
+    <img src="images/GH.png" class="hero-img">
+
+    <div class="hero-overlay">
+        <h1>Alarmierung</h1>
+    </div>
 </header>
 
 <nav>
@@ -77,6 +83,15 @@
 <footer>
 © 2026 Feuerwehr Oesteröda
 </footer>
+<script>
+let slides = document.querySelectorAll(".hero-img");
+let index = 0;
 
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 4000);
+</script>
 </body>
 </html>
